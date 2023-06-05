@@ -8,7 +8,7 @@ return [
 
     # Site Information
     'site_name' => envconfig('SITE_NAME', 'PHPédia'),
-    'site_author' => envconfig('SITE_AUTHOR', '@erikaheidi'),
+    'site_author' => envconfig('SITE_AUTHOR', 'PHPédia BR Team'),
     'site_description' => envconfig('SITE_DESC', 'Librarian is a static site generator inspired by Hugo and built in PHP.'),
     'site_url' => envconfig('SITE_URL', 'http://localhost:8000'),
     'site_root' => envconfig('SITE_ROOT', '/'),
