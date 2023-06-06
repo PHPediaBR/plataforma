@@ -15,13 +15,13 @@ composer install && npm install
 ### Criar página
 
 ```bash
-composer create:page <nome>
+composer create:page
 ```
 
 ### Criar post
 
 ```bash
-composer create:post <nome>
+composer create:post
 ```
 
 ### Limpar cache
@@ -40,4 +40,10 @@ composer cache:refresh
 
 ```bash
 composer build
+```
+
+### Aplicar correçōes de estilo de código
+
+```bash
+composer lint
 ```
