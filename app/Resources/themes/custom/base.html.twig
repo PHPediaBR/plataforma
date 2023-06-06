@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %} {{ site_title() }} {% endblock %}</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description %} {{ site_description() }} {% endblock %}">
+    {% block meta %}
+        <meta name="author" content="{{ config('site_author') }}">
+        <meta property="og:title" content="{{ site_title() }}">
+        <meta property="og:description" content="{{ site_description() }}">
+        <meta property="og:site_name" content="{{ site_title() }}">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="{{ site_url() }}/img/default_cover_image.png">
+        <meta property="og:image:url" content="{{ site_url() }}/img/default_cover_image.png">
+        <meta property="og:image:alt" content="{{ site_title() }}">
+        <meta property="og:url" content="{{ site_url() }}">
+
+        <meta name="twitter:site" content="{{ site_url() }}">
+        <meta name="twitter:title" content="{{ site_title() }}">
+        <meta name="twitter:description" content="{{ site_description() }}">
+        <meta name="twitter:creator" content="{{ config('site_author') }}">
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="{{ site_url() }}"/>
+        <meta name="twitter:image" content="{{ site_url() }}/img/default_cover_image.png">
+        <meta name="twitter:image:alt" content="{{ site_title() }}">
+    {% endblock %}
+
+    <link href="{{ site_root() }}css/app.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    {% block includes %}
+    {% endblock %}
+</head>
+
+<body class="bg-gray-100 h-screen overflow-hidden">
+  <div class=" px-6 pt-14 lg:px-8">
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 flex flex-col justify-center items-center">
+      <div class="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-10">
+        <h2>Em construção</h2>
+      </div>
+      <div class="text-center mb-5">
+        <img class="h-20" src="{{ site_root() }}img/logo-primary.png" alt="Logo PHPédia">
+      </div>
+      <div class="text-center">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">PHPédia - a enciclopédia sobre PHP da língua portuguesa</h1>
+      </div>
+
+      <div class="mt-10 flex items-center gap-4">
+        <a href="https://github.com/PHPediaBR" id="github" target="_blank">
+          <svg class="fill-[#EC058E] hover:fill-[#bf0675] transition-colors duration-300 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M212.62,75.17A63.7,63.7,0,0,0,206.39,26,12,12,0,0,0,196,20a63.71,63.71,0,0,0-50,24H126A63.71,63.71,0,0,0,76,20a12,12,0,0,0-10.39,6,63.7,63.7,0,0,0-6.23,49.17A61.5,61.5,0,0,0,52,104v8a60.1,60.1,0,0,0,45.76,58.28A43.66,43.66,0,0,0,92,192v4H76a20,20,0,0,1-20-20,44.05,44.05,0,0,0-44-44,12,12,0,0,0,0,24,20,20,0,0,1,20,20,44.05,44.05,0,0,0,44,44H92v12a12,12,0,0,0,24,0V192a20,20,0,0,1,40,0v40a12,12,0,0,0,24,0V192a43.66,43.66,0,0,0-5.76-21.72A60.1,60.1,0,0,0,220,112v-8A61.5,61.5,0,0,0,212.62,75.17ZM196,112a36,36,0,0,1-36,36H112a36,36,0,0,1-36-36v-8a37.87,37.87,0,0,1,6.13-20.12,11.65,11.65,0,0,0,1.58-11.49,39.9,39.9,0,0,1-.4-27.72,39.87,39.87,0,0,1,26.41,17.8A12,12,0,0,0,119.82,68h32.35a12,12,0,0,0,10.11-5.53,39.84,39.84,0,0,1,26.41-17.8,39.9,39.9,0,0,1-.4,27.72,12,12,0,0,0,1.61,11.53A37.85,37.85,0,0,1,196,104Z"></path></svg>
+        </a>
+
+        <a href="https://twitter.com/PHPediaBR" id="twitter" target="_blank">
+          <svg class="fill-[#EC058E] hover:fill-[#bf0675] transition-colors duration-300 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M251.09,67.41A12,12,0,0,0,240,60H211.82a52.73,52.73,0,0,0-43.67-24,50.85,50.85,0,0,0-36.6,14.85A51.87,51.87,0,0,0,116,88v.78c-36.83-11.57-66.38-40.9-66.7-41.23a12,12,0,0,0-20.47,7.38C22.52,125.1,53.48,162.72,70.89,178.05,56.4,192.83,36,200.68,35.8,200.76A12,12,0,0,0,30,218.66C32,221.55,43.44,236,80,236c72.25,0,132.7-55.26,139.6-126.63l28.88-28.88A12,12,0,0,0,251.09,67.41ZM199.52,95.52a11.93,11.93,0,0,0-3.49,7.72C192.14,164.23,141.18,212,80,212a90.78,90.78,0,0,1-12.49-.79C78,204.55,89.72,195.07,98,182.66a12,12,0,0,0-3.9-17c-.12-.07-12.33-7.49-23.43-24.42s-17.26-37-18.46-59.78C69.37,94.4,96,110.79,126,115.84A12,12,0,0,0,140,104V88a28,28,0,0,1,8.41-20.07A27.07,27.07,0,0,1,167.86,60a28.83,28.83,0,0,1,25.82,16.81,12,12,0,0,0,11,7.19H211Z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
