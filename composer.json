@@ -29,7 +29,12 @@
       "@php -r \"file_exists('config.php') || copy('config_sample.php', 'config.php');\""
     ],
     "test" : ["pest"],
-    "lint": ["pint"]
+    "lint": ["pint"],
+    "create:page": ["./librarian create content page"],
+    "create:post": ["./librarian create content post"],
+    "cache:clear": ["./librarian cache clear"],
+    "cache:refresh": ["./librarian cache refresh"],
+    "build": ["./librarian build"]
   },
   "require-dev": {
     "pestphp/pest": "^2.0",
