@@ -9,8 +9,8 @@ return [
      *****************************************************************************************/
 
     // Site Information
-    'site_name' => envconfig('SITE_NAME', 'PHPédia'),
-    'site_author' => envconfig('SITE_AUTHOR', 'PHPédia BR Team'),
+    'site_name' => envconfig('SITE_APP_NAME', 'PHPédia'),
+    'site_author' => envconfig('SITE_AUTHOR', 'PHPediaBR'),
     'site_description' => envconfig('SITE_DESC', 'PHPédia - enciclopédia colaborativa de PHP na língua portuguesa'),
     'site_url' => envconfig('SITE_URL', 'http://localhost:8000'),
     'site_root' => envconfig('SITE_ROOT', '/'),
