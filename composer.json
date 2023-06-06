@@ -1,9 +1,8 @@
 {
-  "name": "librarianphp/librarian",
-  "description": "Librarian CMS",
+  "name": "phpedia/plataforma",
+  "description": "Plataforma da PHPédia",
   "license": "MIT",
-  "homepage": "https://github.com/minicli/librarian",
-  "keywords": ["cms","markdown", "blog"],
+  "homepage": "https://phpedia.dev",
   "autoload": {
     "psr-4": {
       "App\\": "app/"
@@ -30,12 +29,13 @@
       "@php -r \"file_exists('config.php') || copy('config_sample.php', 'config.php');\""
     ],
     "test" : ["pest"],
-    "csfix": ["php-cs-fixer fix"]
+    "lint": ["pint"]
   },
   "require-dev": {
     "pestphp/pest": "^2.0",
     "minicli/pest-plugin-curly": "^0.2.1",
-    "friendsofphp/php-cs-fixer": "^3.16"
+    "friendsofphp/php-cs-fixer": "^3.16",
+    "laravel/pint": "^1.10"
   },
   "config": {
     "allow-plugins": {

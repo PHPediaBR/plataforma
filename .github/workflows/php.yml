@@ -23,5 +23,5 @@ jobs:
     - name: Run test suite
       run: composer test
 
-    - name: Run php-cs-fixer
-      run: composer csfix
+    - name: Check code style
+      run: composer lint
